@@ -1,0 +1,189 @@
+/* Palette */
+:root{
+  --teal: #0f3d3e;
+  --gold: #d4af37;
+  --cream-1: #f7f2ea;
+  --cream-2: #f2e9df;
+  --muted: #3f4b47;
+}
+
+/* Base */
+html,body { height:100%; }
+body{
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background: linear-gradient(120deg, var(--cream-1) 0%, var(--cream-2) 100%);
+  color: var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus { outline: none; }
+
+/* Header pill */
+.header-pill {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 15px rgba(15,61,62,0.1);
+  border-radius: 0 0 16px 16px;
+  border: 1px solid rgba(15,61,62,0.04);
+  padding: 0.75rem 1rem;
+}
+
+/* --- Updated Mobile Menu Style --- */
+.mobile-nav-overlay {
+  position: absolute;
+  top: 72px;
+  right: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(0px);
+  border: 1px solid rgba(15,61,62,0.05);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  z-index: 50;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  width: calc(100% - 2rem);
+  max-height: 70vh; /* ✅ limits height */
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-nav-overlay:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* Hero specifics */
+.hero-wrap {
+  min-height: 80vh;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.hero-left h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: 44px;
+}
+.hero-sub {
+  color: #4b5a56;
+  max-width: 90%;
+}
+
+/* floating soft blobs */
+.blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(36px);
+  opacity: 0.42;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  display: none;
+}
+@media (min-width: 768px) {
+  .blob { display: block; }
+}
+
+/* feature cards */
+.feature-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(15,61,62,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* product card gloss */
+.product-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(15,61,62,0.05);
+  border: 1px solid rgba(15,61,62,0.04);
+}
+.product-media { height: 180px; overflow: hidden; }
+.product-media img { width: 100%; height: 100%; object-fit: cover; transform-origin: center; }
+
+/* modal */
+.modal-backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
+.modal-card {
+  background: linear-gradient(180deg,#ffffff,#fbfaf8);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  max-width: 94%;
+  margin: 1rem;
+}
+.modal-card > div { flex-direction: column; }
+.modal-card img { height: 240px; }
+
+/* contact & form */
+.form-field { position: relative; }
+.form-field input, .form-field textarea, .form-field select {
+  width:100%; padding:0.86rem 0.9rem 0.52rem 0.9rem; border-radius:8px;
+  border:1px solid rgba(0,0,0,0.04); background:transparent; font-size:0.95rem;
+}
+
+/* focus visible */
+a:focus, button:focus, [tabindex]:focus { outline: 3px solid rgba(212,175,55,0.12); outline-offset: 3px; }
+
+/* small screens */
+@media (max-width: 640px) {
+  .hero-left h1 { font-size: 40px; }
+}
+
+/* layout helpers */
+.max-w-site { max-width: 1180px; margin-left:auto; margin-right:auto; }
+.divider-wave { height: 2px; background: linear-gradient(90deg, rgba(15,61,62,0.03), rgba(212,175,55,0.05), rgba(15,61,62,0.03)); border-radius: 4px; margin: 2rem 0; }
+header a span {
+  position: relative;
+  top: 10px;
+}
+/* Header brand alignment fix */
+header a span {
+  position: relative;
+  top: 1px; /* fixed from 10px to 1px for perfect alignment */
+}
+
+/* Hero fix: make video fill header gap */
+.hero-wrap video {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Prevent top white gap */
+.hero-wrap {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden !important;
+}
+@media (max-width: 768px) {
+  #mobileMenu {
+    animation: fadeSlideDown 0.3s ease forwards;
+  }
+
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

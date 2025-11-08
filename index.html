@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lush Layers — Premium Pillows</title>
+        <!-- SEO META TAGS -->
+        <meta name="description" content="Lush Layers — Premium handcrafted pillows designed for comfort, support, and elegance. Explore sleep, travel, and décor collections.">
+        <meta name="keywords" content="pillows, premium pillows, orthopedic pillows, memory foam, decor cushions, travel pillows, bamboo pillow, lush layers">
+        <meta name="author" content="Lush Layers LLP">
+        <meta name="robots" content="index, follow">
+
+        <!-- Open Graph (for social previews) -->
+        <meta property="og:title" content="Lush Layers — Premium Comfort Pillows">
+        <meta property="og:description" content="Experience luxury, comfort, and craftsmanship in every layer. Discover our premium pillow collections.">
+        <meta property="og:image" content="https://teamtattvotech.github.io/LUSH-LAYERS/assets/images/logo/logo.png">
+        <meta property="og:url" content="https://teamtattvotech.github.io/LUSH-LAYERS/">
+        <meta property="og:type" content="website">
+        <!-- Performance -->
+        <link rel="preload" href="assets/videos/bgvideo1.webm" as="video" type="video/webm">
+        <link rel="preload" href="assets/images/logo/logo.png" as="image">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Styles (local) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- HEADER -->
+<header class="w-full fixed top-0 left-0 z-50 px-4 md:px-6">
+  <div class="max-w-6xl mx-auto header-pill flex items-center justify-between relative">
+    
+    <!-- LOGO + BRAND -->
+    <a href="#home" class="flex items-center gap-2 align-middle">
+      <img 
+        src="assets/images/logo/logo.png" 
+        alt="Lush Layers Logo" 
+        class="w-14 h-14 object-contain rounded-full border border-[rgba(15,61,62,0.06)] bg-gradient-to-br from-[#fff7e6] to-[#f3e6c2] p-1 inline-block align-middle"
+      />
+      <span class="text-base font-semibold text-[var(--teal)] font-serif md:text-lg relative top-[1px]">Lush Layers</span>
+    </a>
+
+    <nav id="desktopNav" class="hidden md:flex gap-6 items-center text-sm text-[var(--muted)]">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#collections" class="hover:underline">Collections</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="#collections" class="px-4 py-2 rounded-full" style="background: linear-gradient(90deg,var(--gold), #ffd991); color:var(--teal); font-weight:600;">Shop Now</a>
+    </div>
+
+    <div class="md:hidden">
+      <button id="mobileToggle" class="p-1.5 rounded-md border border-transparent bg-white/50" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg id="closeIcon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-nav-overlay hidden md:hidden">
+      <nav class="flex flex-col gap-6 items-start text-lg text-[var(--muted)] font-medium">
+        <a href="#home" class="hover:text-[var(--teal)]">Home</a>
+        <a href="#about" class="hover:text-[var(--teal)]">About</a>
+        <a href="#collections" class="hover:text-[var(--teal)]">Collections</a>
+        <a href="#contact" class="hover:text-[var(--teal)]">Contact & Support</a>
+      </nav>
+      <a href="#collections" class="mt-8 px-5 py-2.5 rounded-full w-full block text-center text-base" style="background: linear-gradient(90deg,var(--gold), #ffd991); color:var(--teal); font-weight:600;">Shop All Pillows</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</header>
+
+<main class="pt-0">
+<!-- HERO SECTION -->
+<section id="home" class="hero-wrap relative overflow-hidden pt-[4rem] md:pt-[5rem]">
+  <!-- Background Video -->
+<video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+  <source src="assets/videos/bgvideo1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/10 z-0"></div>
+
+  <!-- Decorative Blobs -->
+  <div class="blob absolute" style="width:260px;height:260px;background:rgba(212,175,55,0.14);left:6%;top:12%;"></div>
+  <div class="blob absolute" style="width:220px;height:220px;background:rgba(15,61,62,0.06);right:8%;top:24%;"></div>
+
+  <!-- Hero Content -->
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- Left Column -->
+      <div class="col-span-12 lg:col-span-7 hero-left mt-10 md:mt-12">
+        <h1 class="mb-4 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">LUSH<br/>LAYERS</h1>
+        <p class="hero-sub text-base mb-6 text-white/90">
+          Soft and stylish pillows — premium fabrics, considered craft. 
+          Specialised support options crafted for sleep posture, travel and therapeutic comfort.
+        </p>
+
+        <div class="flex gap-4 items-center mb-10">
+          <a href="#collections" class="px-6 py-3 rounded-full text-white font-semibold text-sm shadow-md" style="background:var(--teal);">
+            Explore the Collection
+          </a>
+          <a href="#contact" class="text-sm text-white/90 hover:underline">Enquire →</a>
+        </div>
+
+        <div class="relative w-full mb-8">
+          <div class="feature-card w-full relative z-10 bg-white/70 backdrop-blur-sm rounded-lg p-3">
+            <img src="assets/images/backgrounds/bento-bg.jpg" alt="Pillow detail" class="w-full h-48 object-cover rounded-lg mb-3">
+            <h3 class="text-lg font-semibold text-[var(--teal)]">Premium Detail</h3>
+            <p class="text-sm text-[var(--muted)]/90 mt-1">
+              High-resolution detail — stitch, fill and finish shown true-to-life.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-[rgba(15,61,62,0.03)]">
+            <h4 class="font-semibold text-[var(--teal)] text-sm">Soft & Supportive</h4>
+            <p class="text-xs text-[var(--muted)]/90 mt-1">Balanced loft with adaptive fills for a restful night.</p>
+          </div>
+          <div class="p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-[rgba(15,61,62,0.03)]">
+            <h4 class="font-semibold text-[var(--teal)] text-sm">Breathable & Pure</h4>
+            <p class="text-xs text-[var(--muted)]/90 mt-1">Natural fibres, moisture-wicking covers for freshness.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="hidden lg:block lg:col-span-5 relative mt-12">
+        <div class="flex flex-col gap-6 items-end hero-feature-wrap">
+          <div class="feature-card w-full lg:w-[380px] bg-white/80 backdrop-blur-sm rounded-lg p-3">
+            <img src="assets/images/backgrounds/hero-bg.jpg" alt="Pillow detail" class="w-full h-40 object-cover rounded-lg mb-3">
+            <h3 class="text-lg font-semibold text-[var(--teal)]">Pillow detail</h3>
+            <p class="text-sm text-[var(--muted)]/90 mt-1">High-resolution detail — stitch, fill and finish shown true-to-life.</p>
+          </div>
+          <div class="feature-card w-[260px] bg-white/80 backdrop-blur-sm rounded-lg p-3">
+            <img src="assets/images/backgrounds/hero-pattern.jpg" alt="Fabric" class="w-full h-28 object-cover rounded-md mb-3">
+            <h4 class="text-sm font-semibold text-[var(--teal)]">Fabric texture</h4>
+            <p class="text-xs text-[var(--muted)]/90 mt-1">Soft woven surface with superior hand-feel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 2) ABOUT (images left, text right) -->
+    <section id="about" class="pt-24 pb-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="col-span-12 lg:col-span-7">
+            <div class="relative" style="min-height:320px;">
+              <div style="position:absolute; left:0; top:8%; width:46%; transform: rotate(-3deg);">
+                <img src="assets/images/about/about4.jpg" alt="about1" class="w-full h-48 object-cover rounded-lg shadow-lg">
+              </div>
+              <div style="position:absolute; left:34%; top:0; width:46%; transform: rotate(2deg);">
+                <img src="assets/images/about/about3.jpg" alt="about2" class="w-full h-48 object-cover rounded-lg shadow-lg">
+              </div>
+              <div style="position:absolute; left:8%; top:50%; width:46%; transform: rotate(1deg);">
+                <img src="assets/images/about/about2.jpg" alt="about3" class="w-full h-48 object-cover rounded-lg shadow-lg">
+              </div>
+              <div style="position:absolute; left:52%; top:58%; width:40%; transform: rotate(-1deg);">
+                <img src="assets/images/about/about1.jpg" alt="about4" class="w-full h-40 object-cover rounded-lg shadow-lg">
+              </div>
+            </div>
+          </div>
+            
+          <div class="col-span-12 lg:col-span-5">
+            <h2 class="text-3xl font-bold text-[var(--teal)] font-serif mb-4">About</h2>
+            <p class="text-[var(--muted)]/90 mb-4 text-sm">LUSH LAYERS LLP is dedicated to developing
+            innovative, user-centric products that seamlessly
+            enhance everyday living. Our mission is to provide
+            smart, supportive solutions that simplify and elevate daily routines. Whether at home, at work, or on the go, our thoughtfully designed offerings are built to
+            integrate comfort, functionality, and innovation-layer
+            by layer. We believe in creating meaningful impact through products that empower people to live better, every day.</p>
+                        <p class="text-[var(--muted)]/80 mb-4 text-sm">We design by layering — a supportive core, adaptive comfort layers, and breathable finishes. Each product undergoes durability testing and material validation to ensure long life and consistent comfort.</p>
+            <a href="#collections" class="inline-block px-5 py-2 rounded-md text-sm" style="border:1px solid rgba(0,0,0,0.08); background: #ffffff;">See Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+            <!-- === Pillow Features Section === -->
+            <section id="pillow-features" class="py-20 bg-white/80 relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <!-- Feature 1 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-20">
+                <!-- Text Left -->
+                <div class="reveal-left flex flex-col gap-4 order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold text-[var(--teal)] font-serif">
+                    Adaptive Comfort Design
+                    </h3>
+                    <p class="text-[var(--muted)]/90 text-sm leading-relaxed">
+                    Engineered with layered construction that adapts to your posture and pressure points. 
+                    The pillow gently adjusts to your body for balanced alignment and deeper rest.
+                    </p>
+                </div>
+
+                <!-- Image Right -->
+                <div class="reveal-right order-1 md:order-2">
+                    <img src="assets/images/features/features.jpg" 
+                        alt="Adaptive Comfort Design" 
+                        class="w-full h-64 object-cover rounded-xl shadow-md">
+                </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Image Left -->
+                <div class="reveal-left">
+                    <img src="assets/images/features/features2.jpg" 
+                        alt="Breathable Comfort" 
+                        class="w-full h-64 object-cover rounded-xl shadow-md">
+                </div>
+
+                <!-- Text Right -->
+                <div class="reveal-right flex flex-col gap-4">
+                    <h3 class="text-2xl font-semibold text-[var(--teal)] font-serif">
+                    Breathable and Cooling Layers
+                    </h3>
+                    <p class="text-[var(--muted)]/90 text-sm leading-relaxed">
+                    Designed with open-cell structure and moisture-wicking covers to 
+                    regulate temperature and airflow — keeping you cool and fresh all night long.
+                    </p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+<section id="collections" class="py-16">
+  <div class="container mx-auto px-4">
+    <!-- SLEEP STUDIO -->
+    <div class="mb-20">
+      <h2 class="text-3xl font-bold text-[var(--teal)] font-serif mb-4">Our Collections</h2>
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">Sleep Studio</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card p-4 cursor-pointer" data-key="wedgepillow">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/wedge-pillow.jpg" alt="Wedge Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Wedge Pillows</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="neckrest">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/neck-rest.jpg" alt="Neck Rest Cushion" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Neck Rest Cushions</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- WELLNESS ZONE -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">Wellness Zone</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="product-card p-4 cursor-pointer" data-key="orthosupport">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/ortho-pillow.jpg" alt="Ortho Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Anti Strong Ortho Pillow</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="maternity">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/maternity-cushion.jpg" alt="Maternity Cushion" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Maternity Support</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="handsupport">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/hand-support.jpg" alt="Hand Support Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Hand Support Pillows</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- NATURE’S TOUCH -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">Nature’s Touch</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="product-card p-4 cursor-pointer" data-key="bamboo">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/bamboo-charcoal.jpg" alt="Bamboo Charcoal Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Bamboo Charcoal</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="greentea">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/green-tea.jpg" alt="Green Tea Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Green Tea Pillows</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- ON THE MOVE -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">On The Move</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="product-card p-4 cursor-pointer" data-key="travel">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/travel-pillow.jpg" alt="Travel Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Travel Pillows</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="travelsupport">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/travel-support.jpg" alt="Travel Support Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Travel Support Pillows</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- DECOR & LIVING -->
+    <div>
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">Decor & Living</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="product-card p-4 cursor-pointer" data-key="compact">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/cushion.jpg" alt="Cushion" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Cushions</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="bubble">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/bubble-pillow.jpg" alt="Bubble Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Bubble Pillows</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="butterfly">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/butterfly-pillow.jpg" alt="Butterfly Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Butterfly Pillow</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="coxy">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/coxy-cushion.jpg" alt="Coxy Cushion" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Coxy Cushion</h4>
+        </div>
+
+        <div class="product-card p-4 cursor-pointer" data-key="baby">
+          <div class="product-media rounded-md mb-3 overflow-hidden">
+            <img src="assets/images/collections/baby-pillow.jpg" alt="Baby Pillow" class="w-full h-56 object-cover">
+          </div>
+          <h4 class="font-semibold text-lg">Baby Pillows</h4>
+        </div>
+      </div>
+    </div>
+          <!-- MATTRESS TOPPERS (Moved Section) -->
+      <div class="mt-24">
+        <h3 class="text-2xl font-semibold text-[var(--teal)] mb-6">Mattress Toppers</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <!-- Image (Left) -->
+          <div class="rounded-xl overflow-hidden shadow-lg border border-[rgba(15,61,62,0.05)]">
+            <img src="assets/images/collections/mattress-topper.jpg" 
+                alt="Mattress Topper" 
+                class="w-full h-72 object-cover">
+          </div>
+
+          <!-- Text (Right) -->
+          <div>
+            <h4 class="text-xl font-semibold text-[var(--teal)] mb-3">Mattress Toppers</h4>
+            <p class="text-[var(--muted)]/85 text-sm leading-relaxed mb-4">
+              Mattress toppers add an extra layer of softness and support to your bed, 
+              improving comfort and extending mattress life. They help reduce pressure points, 
+              regulate temperature, and give your mattress a fresh, cozy feel for better sleep. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+
+
+<!-- 4) CONTACT -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-start">
+    
+    <!-- Left: Contact Info -->
+    <div>
+      <h2 class="text-3xl font-bold text-[var(--teal)] font-serif mb-6">Get in touch</h2>
+
+      <p class="text-sm text-[var(--muted)]/90 mb-6">
+        We'd love to hear from you! Whether you’re looking for product details, custom orders, or wholesale queries — our team is always ready to assist.
+      </p>
+
+      <div class="space-y-4 text-sm text-[var(--muted)]/90">
+        <div>
+          <p class="font-semibold text-[var(--teal)]">Email</p>
+          <a href="mailto:hello@lushlayers.com" class="hover:underline">hello@lushlayers.com</a>
+        </div>
+        <div>
+          <p class="font-semibold text-[var(--teal)]">Phone</p>
+          <a href="tel:+91 8790333399" class="hover:underline block">8790333399</a>
+          <a href="tel:+91 9133293399" class="hover:underline block">9133293399</a>
+        </div>
+        <div>
+          <p class="font-semibold text-[var(--teal)]">Address</p>
+          <p>12-1-508/B/50/C Sripuri Colony, Hyderabad -40</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div>
+      <h3 class="text-2xl font-semibold text-[var(--teal)] mb-4">Send us a Message</h3>
+              <form id="contactForm" class="bg-white rounded-xl p-6 shadow-lg border border-[rgba(0,0,0,0.03)]">
+          <!-- Name & Contact Number (side by side) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <input type="text" name="name" placeholder="Your Name" required
+              class="px-4 py-3 rounded-md border border-[rgba(0,0,0,0.08)] focus:ring-2 focus:ring-[var(--gold)]/40 text-sm">
+            <input type="tel" name="phone" placeholder="Contact Number" required
+              class="px-4 py-3 rounded-md border border-[rgba(0,0,0,0.08)] focus:ring-2 focus:ring-[var(--gold)]/40 text-sm">
+          </div>
+
+          <!-- Email (full width like message) -->
+          <input type="email" name="email" placeholder="Email Address" required
+            class="w-full px-4 py-3 rounded-md border border-[rgba(0,0,0,0.08)] focus:ring-2 focus:ring-[var(--gold)]/40 text-sm mb-4">
+          <!-- Message -->
+          <textarea name="message" rows="5" placeholder="Write something..."
+            class="w-full px-4 py-3 rounded-md border border-[rgba(0,0,0,0.08)] text-sm focus:ring-2 focus:ring-[var(--gold)]/40 mb-4"></textarea>
+
+          <!-- Submit -->
+          <button type="submit"
+            class="w-full py-3 rounded-md text-white font-semibold text-sm bg-[var(--teal)] hover:bg-[var(--gold)] transition">
+            Send Message
+          </button>
+        </form>
+    </div>
+  </div>
+</section>
+
+<!-- 5) FOOTER -->
+<footer class="bg-[linear-gradient(180deg,#063735,#072e2d)] text-white pt-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Footer Columns -->
+    <div class="grid md:grid-cols-4 gap-8 mt-10">
+      
+      <!-- Brand -->
+      <div>
+        <h4 class="text-lg font-bold mb-2">Lush Layers</h4>
+        <p class="text-sm text-white/80 mb-4">To redefine sleep comfort through thoughtful layering, sustainable materials, and lasting quality — creating products that support better rest and healthier living.</p>
+      </div>
+
+      <!-- About -->
+      <div>
+        <h5 class="font-semibold mb-3">Navigation</h5>
+        <ul class="space-y-2 text-sm text-white/80">
+          <li><a href="#home" class="hover:text-white">Home</a></li>
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#collections" class="hover:text-white">Collections</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h5 class="font-semibold mb-3">Services</h5>
+        <ul class="space-y-2 text-sm text-white/80">
+          <li>Retail & Wholesale</li>
+          <li>Corporate Supply</li>
+          <li>Bulk Orders</li>
+        </ul>
+      </div>
+
+      <!-- Contact + Map -->
+      <div>
+        <h5 class="font-semibold mb-3">Contact</h5>
+        <p class="text-sm text-white/80 mb-2">hello@lushlayers.com</p>
+        <p class="text-sm text-white/80 mb-3">+91 8790333399<br>+91 9133293399</p>
+        <p class="text-sm text-white/80 mb-3">Registered Office: Ground Floor, Chunduru & Co.Ayinabathina Vari Veedhi Ongole -01</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.005382569005!2d80.0421218!3d15.5120268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01076170231b%3A0x3a4477cacc32b022!2sChunduru%20%26%20Co.!5e0!3m2!1sen!2sin!4v1730890000000!5m2!1sen!2sin"
+          class="w-full h-28 rounded-md border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-10 border-t border-white/10 pt-6 text-xs text-white/60 flex flex-col sm:flex-row justify-between items-center">
+      <p>Created & Developed by <b>Tattvo Tech</b></p>
+      <p>© <span id="year"></span> Lush Layers — Crafted with care.</p>
+    </div>
+  </div>
+</footer>
+
+
+  </main>
+
+  <!-- App script -->
+  <script src="app.js"></script>
+<!-- PRODUCT MODAL -->
+<div id="productModal"
+     class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm">
+  <div id="modalContent"
+       class="bg-white rounded-xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden relative animate-fadeIn cursor-default">
+
+    <div class="p-6 grid md:grid-cols-2 gap-6 items-center">
+      <!-- LEFT: IMAGE -->
+      <div class="w-full h-64 overflow-hidden rounded-lg shadow-inner">
+        <img id="modalMainImage" src="" alt="Product Image"
+             class="w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0">
+      </div>
+
+      <!-- RIGHT: TEXT -->
+      <div>
+        <h3 id="modalTitle" class="text-2xl font-semibold text-[var(--teal)] mb-3"></h3>
+        <p id="modalParagraph" class="text-[var(--muted)]/90 text-sm leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes fadeIn {
+  from {opacity:0;transform:scale(.95);}
+  to {opacity:1;transform:scale(1);}
+}
+.animate-fadeIn {animation:fadeIn .25s ease-out;}
+</style>
+
+
+</body>
+</html>
