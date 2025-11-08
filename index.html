@@ -87,10 +87,51 @@
 <!-- HERO SECTION -->
 <section id="home" class="hero-wrap relative overflow-hidden pt-[4rem] md:pt-[5rem]">
   <!-- Background Video -->
-<video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
-  <source src="assets/videos/bgvideo1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div class="absolute inset-0 w-full h-full overflow-hidden">
+  <video id="heroVideo" autoplay muted loop playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
+    <source src="assets/videos/bgvideo1.webm" type="video/webm">
+    <source src="assets/videos/bgvideo1.mp4" type="video/mp4">
+  </video>
+
+  <!-- gif fallback; initially hidden and shown by JS if video fails -->
+  <img id="heroGif" src="assets/videos/bgvideo1.gif" alt="Background animation" class="absolute inset-0 w-full h-full object-cover hidden" loading="lazy" />
+</div>
+
+<script>
+  // If video fails to load or cannot play, show gif fallback
+  const vid = document.getElementById('heroVideo');
+  const gif = document.getElementById('heroGif');
+
+  // if the video element throws an error or cannot play, show GIF
+  vid.addEventListener('error', () => {
+    vid.style.display = 'none';
+    gif.classList.remove('hidden');
+  });
+
+  // also detect playback failed (autoplay policies)
+  vid.addEventListener('play', () => {
+    // video started successfully; ensure gif hidden
+    gif.classList.add('hidden');
+    vid.style.display = 'block';
+  });
+
+  vid.addEventListener('pause', () => {
+    // if paused immediately (could be blocked), show gif
+    if (vid.currentTime < 0.1) {
+      vid.style.display = 'none';
+      gif.classList.remove('hidden');
+    }
+  });
+
+  // last-resort check after load
+  setTimeout(() => {
+    if (vid.readyState < 3) { // HAVE_FUTURE_DATA
+      vid.style.display = 'none';
+      gif.classList.remove('hidden');
+    }
+  }, 1500);
+</script>
+
 
 
   <!-- Overlay -->
